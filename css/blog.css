@@ -1,0 +1,42 @@
+html, body {width: auto!important; overflow-x: hidden!important}
+
+nav{
+    background-color: black;
+}
+.news h1{
+font-size: 70;
+}
+#founder{
+	padding-top: 50px;
+}
+footer{
+	background-color: black;
+	color: white;
+}
+footer span{
+
+	color: white;
+}
+.wrapper
+{
+	padding-bottom: 0px;
+}
+
+.divider
+{
+	position: relative;
+	margin-top: 50px;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}

@@ -1,0 +1,217 @@
+<html>
+    <head>
+        <title>Student Marksheet</title>
+    <style>
+        body{
+            border: 6px double blue ;
+            border-bottom-right-radius: 25px;
+            border-left: none;
+            border-top:none ;
+        }
+        .student_info{
+            display: table;
+            width: 98%;
+            margin:20px;
+            
+
+        }
+        .student_info label{
+          display: table-cell;
+
+
+        }
+        .student_info input{
+            display: table-cell;
+        }
+        .student_info p{
+            display: table-row;
+            
+
+        }
+        h1{
+            text-decoration: underline;
+            text-align: center;
+        }
+        legend{
+            text-decoration: underline;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        fieldset legend button{
+            position: absolute;
+            margin-left: 75%;
+        }
+        .result{
+            margin:20px;
+            margin-top:50px ;
+        }
+        .result table{
+            border:1px solid black;
+            font-weight: bold;
+        }
+        .result table td,th{
+            width: 50%;
+            border: 1px solid black;
+        }
+        .result table input{
+            border: none;
+        }
+    </style>
+    
+    </head>
+    <body>
+        <script type="text/javascript">
+          function myfunc() {
+              var name=document.getElementById("name").value
+              var fname=document.getElementById("fname").value
+              var iname=document.getElementById("iname").value
+              var batch=document.getElementById("batch").value
+
+              var oascore=Number(document.getElementById("oascore").value)
+              var wdscore=Number (document.getElementById("wdscore").value)
+              var itscore=Number( document.getElementById("itscore").value)
+              var bscore= Number (document.getElementById("bscore").value)
+              
+              document.getElementById("tname").value=name
+              document.getElementById("tfname").value=fname
+              document.getElementById("tiname").value=iname
+              document.getElementById("tbatch").value=batch
+              
+              document.getElementById("toascore").value=oascore
+              document.getElementById("twdscore").value=wdscore
+              document.getElementById("titscore").value=itscore
+              document.getElementById("tbscore").value=bscore
+              
+              var total=oascore+wdscore+itscore+bscore
+              var percentage=(total)/4
+              document.getElementById("ttotal").value=total
+              document.getElementById("tpercentage").value=percentage
+
+              if(percentage>80 && percentage<=100)
+              document.getElementById("tgrade").value="A"
+              else if (percentage>50 && percentage<=80)
+              document.getElementById("tgrade").value="B"
+              else
+              document.getElementById("tgrade").value="C"
+          }
+          function rs(){
+            
+            document.getElementById("tname").value=""
+              document.getElementById("tfname").value=""
+              document.getElementById("tiname").value=""
+              document.getElementById("tbatch").value=""
+              
+              document.getElementById("toascore").value=""
+              document.getElementById("twdscore").value=""
+              document.getElementById("titscore").value=""
+              document.getElementById("tbscore").value=""
+              document.getElementById("ttotal").value=""
+              document.getElementById("tpercentage").value=""
+              document.getElementById("tgrade").value="" 
+              
+          }
+        </script>
+        <h1>STUDENT MARKSHEET</h1>
+        <div class="student_info">
+            <form id="sform" method="get">
+            <fieldset id="sfeild">
+
+                 <legend >Student information</legend>
+                <p>   <label for="name" style="padding-left: 150px; padding-right: 100px;">Name:</label>
+                      <input type="text" id="name" name="name"  >
+                      <label for="fname"style="padding-left: 30px; padding-right: 50px;"> Father Name:</label>
+                      <input type="text" id="fname" name="fname" ></p>
+                  <p> <label for="iname" style="padding-left: 150px;">Institute Name:</label>
+                 <input type="text" id="iname" name="iname" >
+                 <label for="batch" style="padding-left: 30px;">Batch:</label>
+                 <input type="text" id="batch" name="batch" ></p>
+            </fieldset>
+                   
+            
+             <fieldset style="margin-top: 30px;">
+
+                <legend>Suject Marks
+                   
+                </legend>
+               <p> <label for="oascore">Office Automation:</label>
+                <input type="text" id="oascore" name="oascore" >
+                <label for="oascore" style="padding: 3px;">Out of 100</label><br></p>
+               <p><label for="wdscore"> Web Designing:</label>
+                <input type="text" id="wdscore" name="wdscore" >
+                <label for="oascore" style="padding: 3px;">Out of 100</label><br></p> 
+              <p>  <label for="itscore">IT:</label>
+                <input type="text" id="itscore" name="itscore" >
+                <label for="oascore" style="padding: 3px;">Out of 100</label><br></p>
+              <p>  <label for="bscore">C# Programing:</label>
+                <input type="text" id="bscore" name="bscore" >
+                <label for="oascore" style="padding: 3px;">Out of 100</label><br></p>
+              <legend><button type="button" name="submit" onclick="myfunc();">SUBMIT</button></legend> 
+               <legend style="margin-left:8% ;"><button type="reset" name="reset" onclick="rs();">RESET</button></legend> 
+           </fieldset>
+        </form>
+    
+        </div>
+    
+        <div class="result">
+            <table>
+                <tr>
+                    <th colspan="2">Student Information</th>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input  id="tname" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Father Name:</td>
+                    <td><input id="tfname" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Institute Name:</td>
+                    <td><input id="tiname" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Batch:</td>
+                    <td><input id="tbatch" type="text"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Subject Marks</th>
+                </tr>
+                <tr>
+                    <td>Office Automation:</td>
+                    <td><input id="toascore" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Web Designing:</td>
+                    <td><input id="twdscore" type="text"></td>
+                </tr>
+                <tr>
+                    <td>IT:</td>
+                    <td><input type="text" id="titscore"></td>
+                </tr>
+                <tr>
+                    <td>C# Programing:</td>
+                    <td><input type="text" id="tbscore"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Marks Result</th>
+                </tr>
+                
+                <tr>
+                    <td>TOTAL:</td>
+                    <td><input id="ttotal" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Percentage:</td>
+                    <td><input id="tpercentage" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Grade:</td>
+                    <td><input id="tgrade" type="text"></td>
+                </tr>
+                
+
+            </table>
+
+        </div>
+    </body>
+</html>

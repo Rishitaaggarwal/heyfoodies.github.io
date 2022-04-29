@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container{
+            display: flex;
+        }
+        .container .emp_info{
+            width: 30%;
+        }
+        .container .salary{
+            width: 70%;
+        }
+         .emp_info label{
+             display: table-cell;
+             padding: 10px;
+        }
+        .emp_info input{
+            display: table-cell;
+        }
+        .emp_info p{
+            display: table-row;
+        }
+        .salary label{
+            display: table-cell;
+            padding:10px;
+            padding-left: 100px;
+        }
+       .salary input{
+            display: table-cell;
+            background-color: rgb(241, 241, 241);
+        }
+        .salary p{
+            display: table-row;
+        }
+        .total{
+            margin-top: 50px;
+        }
+         button{
+            background-color: lightgreen; 
+            font-size: 20px; 
+            padding: 10px; margin-top: 30px; margin-left: 45%; 
+
+        }
+        .total label{
+            padding: 5px;
+            padding-left: 80px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .total input{
+            background-color: rgb(241, 241, 241);
+        }
+        .container button{
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function myfun(){
+            var rph=Number(document.getElementById("rph").value)
+            var hpd=Number(document.getElementById("hpd").value)
+            var days=Number(document.getElementById("days").value)
+
+            var salary=rph*hpd*days;
+            
+            document.getElementById("gsalary").value=salary;
+            document.getElementById("tgsalary").value=salary;
+
+            var gst=(salary*18)/100;
+            document.getElementById("gst").value=gst;
+             
+            var aparttax =(salary*5)/100;
+            document.getElementById("apartmenttax").value=aparttax;
+
+            var red = gst+aparttax;
+            document.getElementById("tdeduction").value=red;
+            document.getElementById("deduction").value=red;
+            
+            var deduct = salary-red;
+            document.getElementById("nsalary").value=deduct;
+            
+
+        }
+    </script>
+<h1 style="text-align: center; color: red;"> Simple Payroll System</h1>
+<div class="container">
+    <div class="emp_info">
+        <form method="get">
+            <p>
+                <label for="ename">Enter Emp Name</label>
+                <input id="ename" type="text">  
+            </p>
+            <p>
+                <label for="rph">Rate Per Hour</label>
+                <input id="rph" type="text"> 
+            </p>
+            <p>
+                <label for="hpd">Hour Per Day</label>
+                <input id="hpd" type="text">  <br>
+
+            </p>               
+            <p>
+                <label for="days">No of day worked</label>
+          <input id="days" type="text">  <br>
+
+            </p>
+         
+          
+        </form>
+
+    </div>
+    <div class="salary">
+        <h2 style="color:blue; text-align:center ">Deduction of salary</h2>
+        <form>
+            <p>
+                <label for="gst">GST 18% Tax</label>
+                <input  id="gst" type="text"> 
+                <label for="gsalary">Gross Salary</label>
+                <input id="gsalary" type="text">  
+            </p>
+            <p>
+                <label for="apartmenttax">Apartment Rent 5%</label>
+                <input type="text" id="apartmenttax"> 
+                <label for="tdeduction">Deduction</label>
+                <input type="text" id="tdeduction">  
+            </p>
+
+
+
+        </form>
+
+    </div>
+
+</div>
+<div class="total">
+    <label for="tgsalary">Gross Salary</label>
+    <input id="tgsalary"type="text"> 
+    <label for="deduction">Total Deduction</label>
+    <input id="deduction" type="text"> 
+    <label for="nsalary">Net Salary</label>
+    <input id="nsalary" type="text">
+</div>
+<button type="submit" onclick="myfun();">Compute</button>
+</body>
+</html>

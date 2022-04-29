@@ -1,0 +1,219 @@
+html, body {width: auto!important; overflow-x: hidden!important}
+.bg{
+	background-color:black;
+}
+body{
+    background-color:black;
+}
+nav{
+    background-color: black;
+}
+#hometext{
+    color: white;
+    font-size:30px;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+body {
+	font-family: 'Varela Round', sans-serif;
+}
+.modal-login {
+	color: #636363;
+	width: 350px;
+}
+.modal-login .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-login .modal-header {
+	border-bottom: none;
+	position: relative;
+	justify-content: center;
+}
+.modal-login h4 {
+	text-align: center;
+	font-size: 26px;
+}
+.modal-login  .form-group {
+	position: relative;
+}
+.modal-login i {
+	position: absolute;
+	left: 13px;
+	top: 11px;
+	font-size: 18px;
+}
+.modal-login .form-control {
+	padding-left: 40px;
+}
+.modal-login .form-control:focus {
+	border-color: #00ce81;
+}
+.modal-login .form-control, .modal-login .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-login .hint-text {
+	text-align: center;
+	padding-top: 10px;
+}
+.modal-login .close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}
+.modal-login .btn, .modal-login .btn:active {	
+	border: none;
+	background: #00ce81 !important;
+	line-height: normal;
+}
+.modal-login .btn:hover, .modal-login .btn:focus {
+	background: #00bf78 !important;
+}
+.modal-login .modal-footer {
+	background: #ecf0f1;
+	border-color: #dee4e7;
+	text-align: center;
+	margin: 0 -20px -20px;
+	border-radius: 5px;
+	font-size: 13px;
+	justify-content: center;
+}
+.modal-login .modal-footer a {
+	color: #999;
+}
+.trigger-btn {
+	display: inline-block;
+	margin: 100px auto;
+}
+header{
+    background-color: black;
+}
+footer {
+    color: white;
+    background-color: black;
+    margin: 0px
+    
+}
+#share{
+    margin-top: 60px;
+    padding: 50px;
+    justify-self: unset;
+    direction: rtl;
+}
+footer span{
+	color: gray;
+}
+.wrapper
+{
+	padding-bottom: 0px;
+}
+
+.divider
+{
+	position: relative;
+	margin-top: 50px;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+#cont h2{
+text-align: center;
+
+}
+#cont i{
+    font-style: italic;
+}
+#cont span{
+    color: grey;
+}
+.tab-content .col{
+padding-left: 70;
+}
+main{
+    height: auto;
+    margin-bottom: 50px;
+}
+.card-container{
+	display: flex;
+	background-color: black;
+    height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+.card-container .card{
+	width: 320px;
+	height: 380px;
+	background-color: #f1f3b8;
+	border-radius: 1rem;
+	padding: 4rem 2rem 0;
+}
+.card-container .card .card-img{
+	position: absolute;
+	width: 260px;
+	filter: drop-shadow(5px 10px 15px rgba(8,9,13,.2));
+	transform: translate(.2rem,-16.5rem) rotate(-6deg);
+}
+.card-container .card .card-body{
+	transform: translateY(2.8rem);
+}
+.card-container .card .card-body .card-title{
+	font-size: 1.5rem;
+	 font-weight: bold;
+	  color: #002366;
+	   margin-bottom: .5rem;
+}
+.card-container .card .card-body .card-price{
+	display: inline-block;
+	 font-size: 1.25rem;
+	  font-weight: 500;
+	   margin-bottom: 1rem;
+}
+.card-container .card .card-body .card-description{
+	font: size 1rem;
+	 margin-bottom: 1.25rem;
+}
+.card-container .card .card-body .button{
+	display: block;
+	 width: max-content;
+	 padding:  1.125rem 2rem ;
+	 background-color: #002366;
+	 color: #fff;
+	 border-radius: .5rem;
+	 font-weight: 600;
+}
+#shakes .card-container .card .card-img{
+    
+	position: absolute;
+	width: 260px;
+	filter: drop-shadow(5px 10px 15px rgba(8,9,13,.2));
+	transform: translate(-1.9rem,-9.5rem) ;
+}
+#deserts .card-container .card .card-img{
+    
+	position: absolute;
+	width: 250px;
+	filter: drop-shadow(5px 10px 15px rgba(8,9,13,.2));
+	transform: translate(-1.9rem,-9.5rem) rotate(-1deg);
+}
+#mcourse .card-container .card .card-img{
+    
+	position: absolute;
+	width: 220px;
+	filter: drop-shadow(5px 10px 3px rgba(8,9,13,.2));
+	transform: translate(-0.8rem,-7.5rem) rotate(0deg);
+}
